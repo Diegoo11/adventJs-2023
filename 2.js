@@ -1,4 +1,5 @@
 function manufacture(gifts, materials) {
+  /*
   const materialsArr = materials.split('');
 
   const res = [];
@@ -8,6 +9,9 @@ function manufacture(gifts, materials) {
     }
   });
   return res;
+  */
+
+  return gifts.filter((gift) => gift.split('').every((letras) => materials.includes(letras)));
 }
 
-console.log(manufacture(['tren', 'oso', 'pelota'], 'tronesa'));
+console.log(manufacture(['a', 'b', 'c', 'd'], 'abcd'));
